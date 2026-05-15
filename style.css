@@ -206,6 +206,15 @@ button { border:none; background:none; cursor:pointer; font:inherit; color:inher
 }
 
 /* ── Process-ref cards ───────────────────────────── */
+.refs .proc-ref {
+  background: var(--bg-light2, #f2efe9);
+  border: 1px solid rgba(0,0,0,0.09);
+}
+.refs .proc-ref-loc,
+.refs .proc-ref-desc { color: var(--muted-dark, #6b6660); }
+.refs .proc-ref-title { color: var(--text-dark, #1a1917); }
+.refs .proc-steps { background: #d8d3cc; }
+
 .proc-ref {
   background: var(--bg2);
   border: 1px solid var(--border);

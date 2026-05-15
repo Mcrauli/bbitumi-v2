@@ -36,6 +36,12 @@
       --ease-out:     cubic-bezier(0, 0, 0.2, 1);
       --t:            0.3s;
       --t-slow:       0.7s;
+
+      --bg-light:       #e8e4dd;
+      --bg-light2:      #f2efe9;
+      --text-dark:      #1a1917;
+      --muted-dark:     #6b6660;
+      --border-light:   rgba(0,0,0,0.09);
     }
 
     /* ============================================
@@ -521,8 +527,12 @@
     ============================================ */
     .services {
       padding: 72px 0;
-      background: var(--bg);
+      background: var(--bg-light);
     }
+
+    .services .section-h { color: var(--text-dark); }
+    .services .section-p { color: var(--muted-dark); }
+    .services .section-label { color: var(--accent); }
 
     .services-header {
       margin-bottom: 48px;
@@ -532,14 +542,14 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
+      background: var(--border-light);
+      border: 1px solid var(--border-light);
       border-radius: 20px;
       overflow: hidden;
     }
 
     .svc {
-      background: var(--bg);
+      background: var(--bg-light2);
       padding: 28px 28px 24px;
       position: relative;
       overflow: hidden;
@@ -553,7 +563,7 @@
       opacity: 0;
       transition: opacity var(--t);
     }
-    .svc:hover { background: #181818; }
+    .svc:hover { background: #e9e4dc; }
     .svc:hover::after { opacity: 1; }
 
     .svc-index {
@@ -580,13 +590,13 @@
       font-size: 1.3rem;
       font-weight: 800;
       letter-spacing: -0.5px;
-      color: var(--cream);
+      color: var(--text-dark);
       margin-bottom: 14px;
     }
 
     .svc-desc {
       font-size: 0.875rem;
-      color: var(--muted);
+      color: var(--muted-dark);
       line-height: 1.75;
     }
 
@@ -694,8 +704,12 @@
     ============================================ */
     .refs {
       padding: 72px 0;
-      background: var(--bg);
+      background: var(--bg-light);
     }
+
+    .refs .section-h { color: var(--text-dark); }
+    .refs .section-p { color: var(--muted-dark); }
+    .refs .section-label { color: var(--accent); }
 
     .refs-top {
       display: flex;
