@@ -47,8 +47,8 @@ button { border:none; background:none; cursor:pointer; font:inherit; color:inher
 .navbar { position:fixed; top:0; width:100%; z-index:900; transition:background var(--t) var(--ease),border-color var(--t) var(--ease); border-bottom:1px solid transparent; }
 .navbar.scrolled { background:rgba(17,17,17,.95); backdrop-filter:blur(20px) saturate(180%); -webkit-backdrop-filter:blur(20px) saturate(180%); border-bottom-color:var(--border); }
 .nav-inner { height:80px; display:flex; align-items:center; justify-content:space-between; }
-.logo { font-family:var(--font-display); font-size:1.45rem; font-weight:900; letter-spacing:2px; line-height:1; }
-.logo .o { color:var(--accent); }
+.logo { display:flex; align-items:center; line-height:1; }
+.logo img { display:block; height:36px; width:auto; }
 .nav-links { display:flex; gap:40px; align-items:center; }
 .nav-links > a { font-size:.875rem; font-weight:500; color:var(--muted); letter-spacing:.3px; transition:color var(--t) var(--ease); position:relative; }
 .nav-links > a:not(.nav-cta)::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1px; background:var(--accent); transition:width var(--t) var(--ease); }
