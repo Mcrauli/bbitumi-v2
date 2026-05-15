@@ -100,6 +100,39 @@
     }
     .badge-dot { width:8px; height:8px; min-width:8px; background:var(--accent); border-radius:50%; }
 
+    .svc-chip {
+      padding: 7px 14px;
+      background: var(--accent-dim);
+      border: 1px solid var(--border-warm);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent);
+      cursor: pointer;
+      transition: background var(--t), border-color var(--t), color var(--t);
+    }
+    .svc-chip.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .form-input {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 0.9rem;
+      color: var(--cream);
+      font-family: var(--font-body);
+      margin-top: 6px;
+      transition: border-color var(--t);
+      outline: none;
+    }
+    .form-input:focus { border-color: rgba(249,115,22,0.4); }
+    .form-input::placeholder { color: var(--muted); }
+    textarea.form-input { resize: vertical; line-height: 1.6; }
+
     @media(max-width:768px) {
       .contact-grid { grid-template-columns:1fr; gap:32px; }
       .contact-card { padding:36px 28px; }
@@ -147,11 +180,13 @@
     <div class="container">
       <div class="contact-grid">
 
-        <!-- Yhteystiedot -->
+        <!-- Vasen: yhteystiedot -->
         <div class="reveal">
           <div class="section-label">Yhteystiedot</div>
-          <div class="contact-card" style="margin-top:24px;">
+          <h2 class="section-h" style="margin-top:16px; max-width:100%;">Otetaan <span class="hl">yhteyttä.</span></h2>
+          <p class="section-p" style="margin-bottom:32px;">Tarjous 24 tunnin sisällä. Palvelemme koko Etelä-Suomen alueella.</p>
 
+          <div class="contact-card">
             <div class="contact-row">
               <div class="contact-ico">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -161,7 +196,6 @@
                 <div class="contact-row-val">Juha Väliviita</div>
               </div>
             </div>
-
             <div class="contact-row">
               <div class="contact-ico">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .9h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -171,7 +205,6 @@
                 <a href="tel:+358404802955" class="contact-row-val">040 480 2955</a>
               </div>
             </div>
-
             <div class="contact-row">
               <div class="contact-ico">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -181,7 +214,6 @@
                 <a href="mailto:juha_valiviita@hotmail.com" class="contact-row-val">juha_valiviita@hotmail.com</a>
               </div>
             </div>
-
             <div class="contact-row">
               <div class="contact-ico">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -191,7 +223,6 @@
                 <div class="contact-row-val" style="cursor:default;">Liekokuja 5b, 01300 Vantaa</div>
               </div>
             </div>
-
             <div class="contact-row">
               <div class="contact-ico">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
@@ -201,42 +232,65 @@
                 <div class="contact-row-val" style="cursor:default;">2613792-9</div>
               </div>
             </div>
-
           </div>
-        </div>
-
-        <!-- Lisätiedot -->
-        <div class="reveal d1">
-          <div class="section-label">Toimialue</div>
-          <h2 class="section-h" style="margin-top:24px; max-width:100%;">Palvelemme koko<br><span class="hl">Etelä-Suomea.</span></h2>
-          <p class="section-p">B. Bitumi Oy palvelee Etelä-Suomen alueella Vantaalta käsin. Liikumme nopeasti kohteille.</p>
 
           <div class="area-chips">
-            <span class="chip">Helsinki</span>
-            <span class="chip">Espoo</span>
-            <span class="chip">Vantaa</span>
-            <span class="chip">Kirkkonummi</span>
-            <span class="chip">Tuusula</span>
-            <span class="chip">Kerava</span>
-            <span class="chip">Järvenpää</span>
-            <span class="chip">Nurmijärvi</span>
-            <span class="chip">Sipoo</span>
-            <span class="chip">+ ympäristökunnat</span>
+            <span class="chip">Helsinki</span><span class="chip">Espoo</span><span class="chip">Vantaa</span>
+            <span class="chip">Kirkkonummi</span><span class="chip">Tuusula</span><span class="chip">Kerava</span>
+            <span class="chip">Järvenpää</span><span class="chip">Nurmijärvi</span><span class="chip">+ ympäristökunnat</span>
           </div>
 
           <div class="alert-24">
             <strong>Päivystys 24/7</strong>
             <p>Sulamisvedet kellariin? Vuotokohdat voidaan pikaisesti paikantaa ja korjata. Soita heti — päivystämme ympäri vuorokauden.</p>
           </div>
+        </div>
 
-          <div class="trust-badges">
-            <h4>Laatu &amp; luotettavuus</h4>
-            <div class="badge-list">
-              <div class="badge-item"><div class="badge-dot"></div>Luotettava Kumppani – tilaajavastuu.fi</div>
-              <div class="badge-item"><div class="badge-dot"></div>Tulityö-, tieturva- ja työturvallisuuskurssit</div>
-              <div class="badge-item"><div class="badge-dot"></div>Ensiapukoulutus</div>
-              <div class="badge-item"><div class="badge-dot"></div>20+ vuoden kokemus alalta</div>
-            </div>
+        <!-- Oikea: lomake -->
+        <div class="reveal d1">
+          <div class="section-label">Tarjouspyyntö</div>
+          <div class="contact-card" style="margin-top:24px;">
+            <form id="contactForm" onsubmit="sendMail(event)">
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+                <div>
+                  <label class="contact-row-label" for="cf-name">Nimi *</label>
+                  <input id="cf-name" name="name" type="text" required placeholder="Etu- ja sukunimi" class="form-input">
+                </div>
+                <div>
+                  <label class="contact-row-label" for="cf-phone">Puhelin *</label>
+                  <input id="cf-phone" name="phone" type="tel" required placeholder="040..." class="form-input">
+                </div>
+              </div>
+
+              <div style="margin-bottom:16px;">
+                <label class="contact-row-label" for="cf-email">Sähköposti *</label>
+                <input id="cf-email" name="email" type="email" required placeholder="email@yritys.fi" class="form-input">
+              </div>
+
+              <div style="margin-bottom:16px;">
+                <div class="contact-row-label" style="margin-bottom:10px;">Palvelu</div>
+                <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                  <button type="button" class="svc-chip" data-val="Kuumabitumijuotos" onclick="toggleChip(this)">Kuumabitumijuotos</button>
+                  <button type="button" class="svc-chip" data-val="Vedeneristys" onclick="toggleChip(this)">Vedeneristys</button>
+                  <button type="button" class="svc-chip" data-val="Kuntokartoitus" onclick="toggleChip(this)">Kuntokartoitus</button>
+                  <button type="button" class="svc-chip" data-val="Valuasfaltti" onclick="toggleChip(this)">Valuasfaltti</button>
+                  <button type="button" class="svc-chip" data-val="Reunakivityöt" onclick="toggleChip(this)">Reunakivityöt</button>
+                  <button type="button" class="svc-chip" data-val="Muu" onclick="toggleChip(this)">Muu</button>
+                </div>
+              </div>
+
+              <div style="margin-bottom:20px;">
+                <label class="contact-row-label" for="cf-msg">Viesti / kohteen kuvaus *</label>
+                <textarea id="cf-msg" name="message" required placeholder="Kerro kohteesta lyhyesti — sijainti, vaurion laajuus, kiireellisyys..." rows="5" class="form-input"></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
+                Lähetä tarjouspyyntö
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+
+            </form>
           </div>
         </div>
 
@@ -294,6 +348,20 @@
   </footer>
 
   <script>
+    function toggleChip(el) { el.classList.toggle('active'); }
+
+    function sendMail(e) {
+      e.preventDefault();
+      const name  = document.getElementById('cf-name').value.trim();
+      const phone = document.getElementById('cf-phone').value.trim();
+      const email = document.getElementById('cf-email').value.trim();
+      const msg   = document.getElementById('cf-msg').value.trim();
+      const chips = [...document.querySelectorAll('.svc-chip.active')].map(c => c.dataset.val).join(', ') || 'Ei valittu';
+      const subject = encodeURIComponent('Tarjouspyyntö – ' + chips);
+      const body = encodeURIComponent('Nimi: ' + name + '\nPuhelin: ' + phone + '\nSähköposti: ' + email + '\nPalvelu: ' + chips + '\n\nViesti:\n' + msg);
+      window.location.href = 'mailto:juha_valiviita@hotmail.com?subject=' + subject + '&body=' + body;
+    }
+
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20), {passive:true});
     const ham = document.getElementById('ham'), mob = document.getElementById('mobMenu');
