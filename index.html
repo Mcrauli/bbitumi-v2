@@ -234,6 +234,7 @@
       display: flex;
       align-items: center;
       overflow: hidden;
+      padding: 120px 0 80px;
     }
 
     .hero-video {
@@ -281,8 +282,8 @@
     .hero-content {
       position: relative;
       z-index: 3;
-      padding: 160px 0 140px;
-      max-width: 920px;
+      padding: 0;
+      max-width: 100%;
     }
 
     .eyebrow {
@@ -325,12 +326,12 @@
 
     .hero h1 {
       font-family: var(--font-display);
-      font-size: clamp(3rem, 7.5vw, 7.2rem);
+      font-size: clamp(2.8rem, 5.5vw, 5.5rem);
       font-weight: 900;
-      line-height: 0.92;
-      letter-spacing: -3px;
+      line-height: 0.95;
+      letter-spacing: -2.5px;
       color: var(--cream);
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
     .hero h1 .highlight { color: var(--accent); }
 
@@ -1045,32 +1046,55 @@
     <div class="hero-fade-bottom" aria-hidden="true"></div>
 
     <div class="container">
-      <div class="hero-content">
-        <div class="eyebrow">
-          <div class="pulse-dot" aria-hidden="true"></div>
-          Premium infrakorjaukset &middot; Etelä-Suomi
+      <div class="hero-split">
+
+        <div class="hero-content">
+          <div class="eyebrow">
+            <div class="pulse-dot" aria-hidden="true"></div>
+            Premium infrakorjaukset &middot; Etelä-Suomi
+          </div>
+
+          <h1>
+            Kestävät bitumi-<br>
+            ja <span class="highlight">infrakorjaukset</span><br>
+            vaativiin kohteisiin.
+          </h1>
+
+          <p class="hero-sub">
+            Erikoisbitumityöt, asfalttikorjaukset ja vedeneristykset
+            ammattitaidolla taloyhtiöille, yrityksille ja infrakohteisiin.
+          </p>
+
+          <div class="hero-actions">
+            <a href="yhteystiedot.html" class="btn-primary">
+              Pyydä tarjous
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#referenssit" class="btn-ghost">Katso referenssit</a>
+          </div>
         </div>
 
-        <h1>
-          Kestävät bitumi-<br>
-          ja <span class="highlight">infrakorjaukset</span><br>
-          vaativiin kohteisiin.
-        </h1>
-
-        <p class="hero-sub">
-          Erikoisbitumityöt, asfalttikorjaukset ja vedeneristykset
-          ammattitaidolla taloyhtiöille, yrityksille ja infrakohteisiin.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#yhteystiedot" class="btn-primary">
-            Pyydä tarjous
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </a>
-          <a href="#referenssit" class="btn-ghost">Katso referenssit</a>
+        <div class="hero-right reveal-right">
+          <div class="hero-stat">
+            <div class="hero-stat-num" data-target="20">0</div>
+            <div class="hero-stat-desc">Vuotta kokemusta bitumi&shy;töistä</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num" data-target="500">0</div>
+            <div class="hero-stat-desc">Onnistunutta projektia</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">100%</div>
+            <div class="hero-stat-desc">Aidolla ammattikalustolla</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">24/7</div>
+            <div class="hero-stat-desc">Päivystysvalmius hätätöille</div>
+          </div>
         </div>
+
       </div>
     </div>
 
