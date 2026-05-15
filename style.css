@@ -17,7 +17,7 @@
   --ease-out:     cubic-bezier(0, 0, 0.2, 1);
   --t:            0.3s;
   --t-slow:       0.7s;
-  --section-pad:  112px;
+  --section-pad:  80px;
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -154,7 +154,7 @@ button { border:none; background:none; cursor:pointer; font:inherit; color:inher
 
 /* ── FAQ ─────────────────────────────────────────── */
 .faq { padding: var(--section-pad) 0; background: var(--bg2); }
-.faq-header { margin-bottom: 64px; }
+.faq-header { margin-bottom: 44px; }
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -166,7 +166,7 @@ button { border:none; background:none; cursor:pointer; font:inherit; color:inher
 }
 .faq-card {
   background: var(--bg2);
-  padding: 36px 32px;
+  padding: 28px 24px;
   transition: background var(--t);
   position: relative;
 }
@@ -222,7 +222,7 @@ button { border:none; background:none; cursor:pointer; font:inherit; color:inher
   display: grid;
   grid-template-columns: 1fr auto 1fr auto 1fr;
   gap: 0;
-  padding: 20px;
+  padding: 14px;
   background: var(--bg3);
   align-items: center;
 }
@@ -257,7 +257,7 @@ button { border:none; background:none; cursor:pointer; font:inherit; color:inher
   padding: 0 14px;
   user-select: none;
 }
-.proc-ref-body { padding: 24px 28px 28px; }
+.proc-ref-body { padding: 18px 24px 22px; }
 .proc-ref-loc {
   font-size: 0.7rem;
   font-weight: 500;
